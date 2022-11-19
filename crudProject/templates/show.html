@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        h3{
+            text-align: center;
+            background-color: aqua;
+            border:10px;
+            border-radius: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Students Data</h3>
+<div class="container">
+
+    <table class="table table-border table-bordered text-center shadow">
+
+     <tr>
+          <th>sid</th>
+
+          <th>sname</th>
+
+           <th>sroll</th>
+
+           <th>course</th>
+
+           <th> doj</th>
+
+           <th>dob</th>
+
+           <th>gender</th>
+
+           <th>state</th>
+
+           <th>nationality</th>
+
+           <th>mob</th>
+
+           <th>email</th>
+
+           <th>password</th>
+
+           <th>Delete Student</th>
+
+           <th>Edit Student</th>
+
+     </tr>
+
+        {% for user in users %}
+
+            <tr>
+
+            <td>{{ user.id }}</td>
+
+            <td>{{ user.sname }}</td>
+
+            <td>{{ user.sroll }}</td>
+
+            <td>{{ user.course}}</td>
+
+            <td>{{ user.doj}}</td>
+
+            <td>{{ user.dob}}</td>
+
+            <td>{{ user.gender}}</td>
+
+            <td>{{ user.state}}</td>
+
+            <td>{{ user.nationality}}</td>
+
+            <td>{{ user.mob}}</td>
+
+            <td>{{ user.email}}</td>
+
+            <td>{{ user.password}}</td>
+
+            <td><a href="/delete/{{ user.id }}" class="btn btn-danger">Delete</a></td>
+
+
+            <td><a href="/edit/{{ user.id }}" class="btn btn-info">Edit</a></td>
+
+
+
+            </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        h3{
+            text-align: center;
+            background-color: aqua;
+            border:10px;
+            border-radius: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Add your Data here</h3>
+    <form method="POST" action="" novalidate>
+        {% csrf_token %}
+
+        <div class="form-group">
+             <label><b> Name:</b></label>
+        {{ form.sname }}
+        </div>
+
+         <div class="form-group">
+             <label><b> Roll:</b></label>
+        {{ form.sroll }}
+         </div>
+
+             <div class="form-group">
+             <label><b> course:</b></label>
+        {{ form.course }}
+             </div>
+
+        <div class="form-group">
+             <label><b>  doj:</b></label>
+        {{ form.doj }}
+        </div>
+
+         <div class="form-group">
+             <label><b>  dob:</b></label>
+        {{ form.dob }}
+        </div>
+
+        <div class="form-group">
+             <label><b> gender:</b></label>
+        {{ form.gender }}
+        </div>
+
+         <div class="form-group">
+             <label><b> state:</b></label>
+        {{ form.state }}
+        </div>
+
+         <div class="form-group">
+             <label><b>  nationality:</b></label>
+        {{ form.nationality }}
+        </div>
+
+        <div class="form-group">
+             <label><b>mob:</b></label>
+        {{ form.mob }}
+        </div>
+
+         <div class="form-group">
+             <label><b>email:</b></label>
+        {{ form.email }}
+        </div>
+
+        <div class="form-group">
+             <label><b>  password:</b></label>
+        {{ form.password}}
+        </div>
+
+        <input type="submit" name="insert" value="insert" class="btn btn-primary">
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
