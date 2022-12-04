@@ -13,3 +13,4 @@ class studentForm(forms.ModelForm):
     class Meta:
         model= crud_student
         fields='__all__'
+#model forms are done
