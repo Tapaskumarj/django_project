@@ -43,5 +43,5 @@ def update(request,id):
 
     return render(request, 'edit.html',{'form':fm})
 
-
+print("hello dude")
 
